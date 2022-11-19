@@ -1,0 +1,370 @@
+@import url(./font.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    color: white;
+    font-family: var(--Poppins);
+}
+
+
+/* -------------Global Classes------------- */
+
+ :root {
+    --Sansita: "Sansita", cursive;
+    --Courgette: "Courgette", cursive;
+    --Abel: "Abel", cursive;
+    --Livvic: "Livvic", cursive;
+    --Poppins: "Poppins", cursive;
+    --Averia_Serif_Libre: "Averia_Serif_Libre", cursive;
+    --Bangers: "Bangers", cursive;
+    --Be_Vietnam: "Be_Vietnam", cursive;
+    --Kaushan_Script: "Kaushan_Script", cursive;
+    --Special_Elite: "Special_Elite", cursive;
+    --Roboto: "Roboto", cursive;
+    --East_Sea_Dokdo: "East_Sea_Dokdo", cursive;
+    --Amaranth: "Amaranth", cursive;
+    --Neon: "Neon", cursive;
+    --Montserrat1: "Montserrat1", cursive;
+    --Montserrat2: "Montserrat2", cursive;
+    --Montserrat3: "Montserrat3", cursive;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+.brand-span {
+    font-size: 2rem;
+    color: rgb(105, 255, 195);
+    font-family: var(--Montserrat1);
+    letter-spacing: 10px;
+}
+
+.news-img {
+    width: 100px;
+    height: 70px;
+}
+
+.heading span {
+    color: rgb(105, 255, 195);
+    font-family: var(--Poppins);
+}
+
+
+/* ------x-------Global Classes------x------- */
+
+
+/* -------------NAV BAR------------- */
+
+.navbar {
+    width: 100%;
+    min-height: 9vh;
+}
+
+.nav-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 3rem;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.267);
+}
+
+.nav-content .brand-name a {
+    display: block;
+    color: white;
+    font-family: var(--Montserrat2);
+    font-size: 1.2rem;
+    margin: 0 2rem;
+}
+
+.nav-content .nav-links {
+    display: inline-flex;
+}
+
+.nav-links li {
+    margin: 1.5rem 3.5rem;
+    font-size: 1rem;
+    font-family: var(--Poppins);
+    color: white;
+}
+
+.nav-links li a {
+    color: white;
+    transition: .2s ease-in-out;
+}
+
+.nav-content .nav-links li a:hover {
+    color: rgb(140, 248, 205);
+    transition: .2s ease-in-out;
+}
+
+#create-news {
+    background-color: rgb(140, 248, 205);
+    color: black;
+    padding: .3rem 1rem;
+    font-weight: bold;
+    transition: .3s ease-in-out;
+}
+
+#create-news:hover {
+    background-color: transparent;
+    border: 1px solid rgb(140, 248, 205);
+    color: white;
+    font-weight: lighter;
+    transition: .3s ease-in-out;
+}
+
+
+/* ------x-------NAV BAR------x------- */
+
+
+/* -------------HOMEPAGE------------- */
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 5rem;
+}
+
+.heading h1 {
+    font-family: var(--Montserrat3);
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 1rem;
+    margin-top: -1rem;
+}
+
+.main-content .main-left .news-content {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.267);
+    margin-top: 1rem;
+    width: 90%;
+}
+
+.main-content .main-left .news-content h6 {
+    margin: 0 1rem;
+    font-size: .9rem;
+    font-family: var(--Be_Vietnam);
+    font-weight: lighter;
+}
+
+.main-content .main-left .news-content h6:hover {
+    color: rgba(255, 255, 255, 0.527);
+    transition: .2s ease-in-out;
+}
+
+
+/* .main-right {
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.main-right {
+    width: 100%;
+}
+
+.main-right .img-content {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s ease-in-out;
+}
+
+.img {
+    width: 580px;
+    height: 420px;
+    vertical-align: middle;
+    transition: .2s ease-in-out;
+    background-position: center;
+    background-size: contain;
+}
+
+.img:hover {
+    transform: scale(1.5);
+}
+
+.back,
+.next {
+    width: 40px;
+    height: 60px;
+    font-size: 30px;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    transition: .2s ease-in-out;
+    z-index: 9999;
+}
+
+.back {
+    left: 2%;
+    background-color: rgba(140, 248, 205, 0.099);
+    border-radius: 4rem;
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.411);
+}
+
+.back:hover {
+    background-color: rgba(140, 248, 205, 0.668);
+    color: rgba(0, 0, 0, 0.822);
+    transition: .2s ease-in-out;
+}
+
+.next {
+    right: 2%;
+    background-color: rgba(140, 248, 205, 0.099);
+    border-radius: 4rem;
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.411);
+}
+
+.next:hover {
+    background-color: rgba(140, 248, 205, 0.668);
+    color: rgba(0, 0, 0, 0.822);
+    transition: .2s ease-in-out;
+}
+
+.img-box {
+    display: none;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.img-overlay {
+    padding: 20rem 6rem;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.486);
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+.img-overlay h3 {
+    font-family: var(--Poppins);
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    color: white;
+    font-weight: bolder;
+}
+
+.img-overlay h3 a {
+    color: white;
+    font-size: .9rem;
+    font-weight: lighter;
+    border-bottom: 2px solid rgb(129, 252, 203);
+}
+
+.img-overlay {
+    visibility: visible;
+}
+
+
+/* -------x------HOMEPAGE-------x------ */
+
+
+/* -------------NEWSPAGE------------- */
+
+.main-news {
+    width: 100%;
+}
+
+.main-news-content {
+    margin: 3rem 5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.main-news-content .mn-title {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.main-news-content .publish {
+    text-align: left;
+    margin: 0 9.5rem;
+    font-size: .7rem;
+    color: rgba(255, 255, 255, 0.466);
+    margin-bottom: 1rem;
+}
+
+.nb-img {
+    width: 800px;
+    height: 500px;
+    margin-bottom: 2rem;
+}
+
+.news-body p {
+    margin: 1rem 0;
+    text-align: justify;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.942);
+}
+
+
+/* -------x------NEWSPAGE-------x------ */
+
+
+/* -------------FOOTER------------- */
+
+.footer {
+    width: 100%;
+    top: 92%;
+}
+
+.footer p {
+    padding: .7rem 0;
+    margin: 0 15rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.421);
+    text-align: center;
+    font-family: var(--Poppins);
+    font-size: .9rem;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+
+/* -------x------FOOTER-------x------ */
