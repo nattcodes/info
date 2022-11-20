@@ -1,4 +1,4 @@
-//-------------------------------------
+//---------------SLIDER SECTION----------------------
 let index = 0;
 let i = 0;
 let slider = document.getElementsByClassName("img-box");
@@ -37,43 +37,18 @@ function change() {
     show(index);
 }
 
-//-------------------------------------
+//--------X-------SLIDER SECTION---------X-------------
 
-//-------------------------------------
-// fetch(API_URL)
-//     .then((res) => res.json())
-//     .then((data) => {
-//         let topNews = `<div class="heading">
-//         <h1><span>I</span> Top News</h1>
-//     </div>`;
-//         data.map((newsItem) => {
-//             topNews += `
-//             <div class="news-content">
-//                 <img class="news-img" src=${newsItem.avatar}>
-//                 <a href="#">
-//                     <h6>${newsItem.title}</h6>
-//                 </a>
-//             </div>     
-//             `
-//         })
-//         document.querySelector(".main-left").innerHTML = topNews;
-//     })
-// const options = {
-//     method: 'GET',
-//     headers: {
-//         'X-RapidAPI-Key': 'a066089923msh5b1a931b03faf69p19915bjsn78e8ed60fd96',
-//         'X-RapidAPI-Host': 'real-time-news-data.p.rapidapi.com'
-//     }
-// };
 
-fetch("news.json")
+//--------------API DATA-----------------
+fetch("news.json") //using fetch, get the api or json data
     .then((res) => res.json())
     .then((data) => {
         let topNews = `<div class="heading">
                     <h1><span>I</span> Top News</h1>
                 </div>`;
         let slideImage = "";
-        data.slice(8, 12).map((newsItem) => {
+        data.slice(8, 12).map((newsItem) => { //splice, get a particular section of the files and then map them
 
             topNews += `
                         <div key=${newsItem.id} class="news-content">
@@ -98,23 +73,9 @@ fetch("news.json")
                         `
 
         })
-        document.querySelector(".main-left").innerHTML = topNews;
+        document.querySelector(".main-left").innerHTML = topNews; //connect every api/json file to the main container ".main-left"
         document.querySelector(".img-content").innerHTML = slideImage;
 
     })
-    .catch(err => console.error(err));
-//-------------------------------------
-// <div class="publish">
-//     <h4>Published on ${newsItem.published_datetime_utc}</h4>
-//     <h4>By ${newsItem.publisher}</h4>
-// </div>
-// <div class="news-body">
-//     <img class="nb-img" src=${newsItem.photo_url}>
-//     <p>${newsItem.text.p1}</p>
-//     <p>${newsItem.text.p2}</p>
-//     <p>${newsItem.text.p3}</p>
-//     <p>${newsItem.text.p4}</p>
-//     <p>${newsItem.text.p5}</p>
-
-
-// </div>
+    .catch(err => console.error(err)); //catch any errors in the api and print them out in the console 
+//----X-------API DATA---------X-----------------

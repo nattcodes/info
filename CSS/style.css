@@ -381,14 +381,17 @@ ul {
 }
 
 .comment-content .users-comments .box h3 {
-    margin-bottom: .4rem;
-    font-size: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .2rem;
+    font-size: .9rem;
     font-weight: lighter;
     color: rgb(187, 249, 224);
 }
 
 .comment-content .users-comments .box p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.267);
 }
 
 .form {
@@ -426,6 +429,11 @@ ul {
     border: none;
     border-radius: .3rem;
     outline: none;
+    font-size: 1rem;
+}
+
+.comment-form textarea[name="comment"] {
+    font-family: var(--Poppins);
     font-size: 1rem;
 }
 
